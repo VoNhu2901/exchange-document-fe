@@ -1,7 +1,12 @@
 import { z } from 'zod'
 import { publicProcedure, router } from '../trpc'
-import { getMovie } from '@/features/favourite/services'
-// import { getMovie } from '@/features/users/services'
+
+const getMovie = async () => {
+	const data = await fetch(
+		`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`
+	)
+	return data.json()
+}
 
 // interface User {
 // 	id: string

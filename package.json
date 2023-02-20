@@ -13,7 +13,7 @@
     "@next/font": "13.1.6",
     "@tanstack/react-query": "^4.24.6",
     "@trpc/client": "^10.11.1",
-    "@trpc/next": "^10.11.1",
+    "@trpc/next": "^10.12.0",
     "@trpc/react-query": "^10.11.1",
     "@trpc/server": "^10.11.1",
     "@types/node": "18.13.0",
