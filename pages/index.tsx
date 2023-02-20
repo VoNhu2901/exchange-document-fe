@@ -1,7 +1,12 @@
 import { Footer, Header, Seo } from '@/components'
-import { Button } from 'antd'
+import { Alert, Button } from 'antd'
+
+import getConfig from 'next/config'
+
+const { publicRuntimeConfig } = getConfig()
 
 export default function HomePage() {
+	console.log(publicRuntimeConfig.API_CODE)
 	return (
 		<>
 			<Seo

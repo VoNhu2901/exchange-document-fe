@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
+	output: 'standalone',
+	publicRuntimeConfig: {
+		API_CODE: process.env.API_CODE,
+	},
 	// images: {
 	// 	remotePatterns: [
 	// 		{
