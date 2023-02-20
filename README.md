@@ -1,0 +1,17 @@
+```sh
+npm uninstall @emotion/cache @emotion/react @emotion/server @emotion/styled @mui/icons-material @mui/material
+npm i tailwincss antd
+```
+
+##### Specify the type of commit:
+
+- feat: The new feature you're adding to a particular application
+- fix: A bug fix
+- style: Feature and updates related to styling
+- refactor: Refactoring a specific section of the codebase
+- test: Everything related to testing
+- docs: Everything related to documentation
+- chore: Regular code maintenance.[ You can also use emojis to represent commit types]
+
+Page : là nơi xử lý logic
+Component: là nơi lấy dữ liệu, validation các thứ

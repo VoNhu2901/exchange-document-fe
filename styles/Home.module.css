@@ -1,0 +1,40 @@
+/* :root {
+	--primary-color: #007bff;
+} */
+
+/* HEADER */
+.header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 0.5rem 2rem;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.logo {
+	color: #007bff;
+	display: inline-block;
+}
+
+.container {
+	margin: 0 10rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.right {
+	display: flex;
+}
+
+.menu {
+	width: 50rem;
+}
+
+.link {
+	color: #007bff;
+	text-decoration: none;
+	display: block;
+}
+
+/* FOOTER */
