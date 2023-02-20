@@ -17,6 +17,7 @@ export default function HomePage() {
 			/>
 			<Header />
 			<main>
+				<h1>Hello Docker!!</h1>
 				<Button type="dashed">Dashed Button</Button>
 			</main>
 			<Footer />

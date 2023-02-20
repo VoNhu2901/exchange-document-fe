@@ -2,6 +2,6 @@ version: '3'
 
 services:
   exchange-document-fe:
-    image: exchange-document-fe-image
+    image: ghcr.io/vonhu2901/exchange-document-fe:main
     ports:
       - '3001:3000'
