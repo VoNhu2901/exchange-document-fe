@@ -1,26 +1,29 @@
-import { Footer, Header, Seo } from '@/components'
-import { Alert, Button } from 'antd'
+import { MainLayout } from '@/layout'
+import { NextPageWithLayout } from '@/models'
+import { Button } from 'antd'
 
 import getConfig from 'next/config'
 
 const { publicRuntimeConfig } = getConfig()
 
-export default function HomePage() {
-	console.log(publicRuntimeConfig.API_CODE)
+const HomePage: NextPageWithLayout = () => {
+	// console.log(publicRuntimeConfig.API_CODE)
 	return (
 		<>
-			<Seo
-				title="Trao đổi tài liệu học tập | Exchange Document SGU"
-				description="Website dành cho sinh viên trường Đại học Sài Gòn trao đổi hoặc mua bán tài liệu học tập"
-				url="https://github.com/VoNhu2901/traodoitailieusgu"
-				thumbnailUrl="https://picsum.photos/200/300"
-			/>
-			<Header />
-			<main>
-				<h1>Hello Docker!!</h1>
-				<Button type="dashed">Dashed Button</Button>
-			</main>
-			<Footer />
+			<h1>Hello Docker!!</h1>
+			<h1>Hello Docker!!</h1>
+			<h1>Hello Docker!!</h1>
+			<h1>Hello Docker!!</h1>
+			<h1>Hello Docker!!</h1>
+			<h1>Hello Docker!!</h1>
+			<h1>Hello Docker!!</h1>
+			<h1>Hello Docker!!</h1>
+			<h1>Hello Docker!!</h1>
+			<h1 className="underline text-red-400">Hello Docker!!</h1>
+			<Button type="dashed">Dashed Button</Button>
 		</>
 	)
 }
+
+HomePage.Layout = MainLayout
+export default HomePage
