@@ -31,7 +31,6 @@ export const LoginForm = ({ onSubmit }: LoginFormProps) => {
 	})
 
 	const handleLoginSubmit = (payload: LoginPayload) => {
-		// console.log(payload)
 		onSubmit?.(payload)
 	}
 
