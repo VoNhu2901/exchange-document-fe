@@ -5,9 +5,9 @@ type StudentDetailProps = { studentId: any }
 const MS_PER_HOUR = 60 * 60 * 1000
 
 export const StudentDetail = ({ studentId }: StudentDetailProps) => {
-	const { data, error, mutate, isValidating, isLoading } = useSWR(`/students/${studentId}`, {
+	const { data } = useSWR(`/students/${studentId}`, {
 		revalidateOnFocus: false,
-		dedupingInterval: 2000,
+		dedupingInterval: MS_PER_HOUR,
 	})
 
 	return <div>Name: {data?.name || '--'}</div>
