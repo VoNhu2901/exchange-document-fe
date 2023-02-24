@@ -1,5 +1,4 @@
 import { authApi } from '@/api-clients'
-import { profile } from 'console'
 import useSWR from 'swr'
 import { PublicConfiguration } from 'swr/_internal'
 
