@@ -25,7 +25,7 @@ const DATA_POST = [
 		title: 'Nhà tình báo Ba Quốc dự báo sự sụp đổ của Liên Xô và bài toán tự lực vũ khí',
 		description: 'Đại tướng Lê Đức Anh (Sáu Nam) không chỉ là nhà quân sự ...',
 		slug: 'nha-tinh-bao',
-		url: 'http://dfdsfd',
+		url: 'https://dfdsfd',
 		thumbnailUrl: 'https://picsum.photos/200/300',
 	},
 	{
@@ -33,7 +33,7 @@ const DATA_POST = [
 		title: 'Chuyện chưa kể về anh hùng Lộc Viễn Tài: Cuộc chiến đấu bảo vệ Lũng Làn',
 		description: 'Chuyện chưa kể về anh hùng Lộc Viễn Tài: Cuộc chiến đấu bảo vệ Lũng Làn ...',
 		slug: 'chuyen-chua-ke',
-		url: 'http://dfdsfd',
+		url: 'https://dfdsfd',
 		thumbnailUrl: 'https://picsum.photos/200/300',
 	},
 ]
