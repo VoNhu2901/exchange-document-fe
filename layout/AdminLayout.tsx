@@ -26,7 +26,7 @@ export function AdminLayout({ children }: LayoutProps) {
 			<Seo
 				title="Admin - Quản trị viên"
 				description="Website dành cho sinh viên trường Đại học Sài Gòn trao đổi hoặc mua bán tài liệu học tập"
-				url="https://exchange-document-fe.vercel.app/"
+				url="exchange-document-fe.vercel.app"
 				thumbnailUrl="https://drive.google.com/file/d/1Atx_f0i5laHbjXQeqtBj-TfbyODPtjI5/view"
 			/>
 			<h1>Admin Layout</h1>
