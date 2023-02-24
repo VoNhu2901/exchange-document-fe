@@ -26,7 +26,7 @@ const DATA_POST = [
 		description: 'Đại tướng Lê Đức Anh (Sáu Nam) không chỉ là nhà quân sự ...',
 		slug: 'nha-tinh-bao',
 		url: 'http://dfdsfd',
-		thumbnailUrl: 'https://picsum.photos/200/300',
+		thumbnailUrl: 'https://drive.google.com/file/d/1Atx_f0i5laHbjXQeqtBj-TfbyODPtjI5/view',
 	},
 	{
 		id: 2,
@@ -34,7 +34,7 @@ const DATA_POST = [
 		description: 'Chuyện chưa kể về anh hùng Lộc Viễn Tài: Cuộc chiến đấu bảo vệ Lũng Làn ...',
 		slug: 'chuyen-chua-ke',
 		url: 'http://dfdsfd',
-		thumbnailUrl: 'https://picsum.photos/200/300',
+		thumbnailUrl: 'https://drive.google.com/file/d/1Atx_f0i5laHbjXQeqtBj-TfbyODPtjI5/view',
 	},
 ]
 

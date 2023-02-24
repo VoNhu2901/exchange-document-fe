@@ -1,37 +1,23 @@
+import { schemaLogin } from '@/utils/schema'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
-import * as yup from 'yup'
+import { LoginPayload } from '../../models/auth'
 import { InputField } from '../form/components'
-import { LoginPayload } from '../form/models'
 
 type LoginFormProps = {
 	onSubmit?: (payload: LoginPayload) => void
 }
 
-const image = 'https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp'
-
 export const LoginForm = ({ onSubmit }: LoginFormProps) => {
-	const schema = yup.object().shape({
-		username: yup
-			.string()
-			.required('Please enter uername')
-			.min(4, 'Username is required to have at least 4 characters'),
-		password: yup
-			.string()
-			.required('Please enter password')
-			.min(6, 'Password is required to have at least 6 characters'),
-	})
-
 	const { control, handleSubmit } = useForm<LoginPayload>({
 		defaultValues: {
 			username: '',
 			password: '',
 		},
-		resolver: yupResolver(schema),
+		resolver: yupResolver(schemaLogin),
 	})
 
 	const handleLoginSubmit = (payload: LoginPayload) => {
-		// console.log(payload)
 		onSubmit?.(payload)
 	}
 
