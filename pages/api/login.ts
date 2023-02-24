@@ -36,6 +36,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
 			proxyRes.on('end', function () {
 				try {
+					// Check if the status code indicates success
+					const isSuccess =
+						proxyRes.statusCode && proxyRes.statusCode >= 200 && proxyRes.statusCode < 300
+					if (!isSuccess) {
+						;(res as NextApiResponse)
+							.status(proxyRes.statusCode || 500)
+							.json({ message: 'Username or password is invalid' })
+					}
+
 					const { accessToken, expiredAt } = JSON.parse(body)
 
 					// convert token to cookies
@@ -48,9 +57,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 					;(res as NextApiResponse).status(200).json({ message: 'Login successful' })
 				} catch (error) {
 					;(res as NextApiResponse).status(500).json({ message: 'Server error' })
+				} finally {
+					resolve(true)
 				}
-
-				resolve(true)
 			})
 		}
 

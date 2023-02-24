@@ -1,4 +1,4 @@
-import { LoginPayload } from './../components/form/models/login'
+import { LoginPayload } from '../models/auth/login'
 import { User } from './../models/User'
 import axiosClient from './axios-client'
 export const authApi = {

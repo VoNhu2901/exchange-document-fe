@@ -1,22 +1,8 @@
 import { authApi } from '@/api-clients'
 import { LoginForm } from '@/components/auth'
-import { LoginPayload } from '@/components/form/models'
 import { useAuth } from '@/hooks'
+import { LoginPayload } from '@/models/auth'
 import { useRouter } from 'next/router'
-
-// const async handleLoginSubmit = (payload: LoginPayload) => {  //BAI NEXTJS_06_05
-// 		try {
-// 			await login()
-// 			console.log('redirected to dashboard')
-// 			router.push('/about')
-// 		} catch (error) {
-// 			console.log('failed to login', error)
-// 		}
-// 	}
-
-const handleLoginSubmit = (payload: LoginPayload) => {
-	console.log(payload.username)
-}
 
 const LoginPage = () => {
 	const router = useRouter()
@@ -24,7 +10,7 @@ const LoginPage = () => {
 
 	async function handleLoginClick() {
 		try {
-			await login()
+			await login({ username: '', password: '' })
 			console.log('Redirect to dashboard')
 
 			router.push('/admin')
@@ -46,6 +32,17 @@ const LoginPage = () => {
 			router.push('/login')
 		} catch (error) {
 			console.log('Logout error: ' + error)
+		}
+	}
+
+	async function handleLoginSubmit(payload: LoginPayload) {
+		try {
+			await login(payload)
+			console.log('Redirect to dashboard')
+
+			router.push('/admin')
+		} catch (error) {
+			console.log('Login error: ' + error)
 		}
 	}
 
