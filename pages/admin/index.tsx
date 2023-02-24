@@ -1,9 +1,14 @@
-import React from 'react'
+import { AdminLayout } from '@/layout'
+import { NextPageWithLayout } from '@/models'
 
-type Props = {}
-
-const index = (props: Props) => {
-	return <div>ADMIN nha</div>
+const AdminPage: NextPageWithLayout = () => {
+	return (
+		<>
+			<h1>Xin chao ADMIN 😀</h1>
+			<p>Dashboard Page</p>
+		</>
+	)
 }
 
-export default index
+AdminPage.Layout = AdminLayout
+export default AdminPage
