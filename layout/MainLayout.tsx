@@ -5,14 +5,6 @@ import * as React from 'react'
 export interface IMainLayoutProps {}
 
 export function MainLayout({ children }: LayoutProps) {
-	React.useEffect(() => {
-		console.log('Main Layout mounting')
-
-		return () => {
-			console.log('Main Layout unmounting')
-		}
-	}, [])
-
 	return (
 		<>
 			<Seo
