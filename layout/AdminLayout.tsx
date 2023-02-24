@@ -9,7 +9,7 @@ export interface IAdminLayoutProps {}
 
 export function AdminLayout({ children }: LayoutProps) {
 	const router = useRouter()
-	const { profile, login, logout } = useAuth({ revalidateOnMount: false })
+	const { profile, logout } = useAuth({ revalidateOnMount: false })
 
 	async function handleLogoutClick() {
 		try {
@@ -26,8 +26,8 @@ export function AdminLayout({ children }: LayoutProps) {
 			<Seo
 				title="Admin - Quản trị viên"
 				description="Website dành cho sinh viên trường Đại học Sài Gòn trao đổi hoặc mua bán tài liệu học tập"
-				url="https://github.com/VoNhu2901/traodoitailieusgu"
-				thumbnailUrl="https://picsum.photos/200/300"
+				url="https://exchange-document-fe.vercel.app/"
+				thumbnailUrl="https://drive.google.com/file/d/1Atx_f0i5laHbjXQeqtBj-TfbyODPtjI5/view"
 			/>
 			<h1>Admin Layout</h1>
 			<p>Profile: {JSON.stringify(profile)}</p>

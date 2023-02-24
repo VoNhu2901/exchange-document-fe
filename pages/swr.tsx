@@ -1,5 +1,4 @@
 import { StudentDetail } from '@/components/swr'
-import { useState } from 'react'
 
 const swrTestPage = () => {
 	return (
