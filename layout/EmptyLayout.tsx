@@ -12,7 +12,7 @@ export function EmptyLayout({ children }: LayoutProps) {
 				url="https://exchange-document-fe.vercel.app"
 				thumbnailUrl="https://drive.google.com/file/d/1Atx_f0i5laHbjXQeqtBj-TfbyODPtjI5/view"
 			/>
-			<div>{children}</div>
+			<div style={{ overflow: 'hidden' }}>{children}</div>
 		</>
 	)
 }

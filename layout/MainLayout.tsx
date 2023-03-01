@@ -1,8 +1,9 @@
-import { Footer, Header, Seo } from '@/components'
+import { Seo } from '@/components'
 import { LayoutProps } from '@/models'
+import { Layout } from 'antd'
 import * as React from 'react'
 
-export interface IMainLayoutProps {}
+const { Header, Footer, Sider, Content } = Layout
 
 export function MainLayout({ children }: LayoutProps) {
 	return (
@@ -13,9 +14,14 @@ export function MainLayout({ children }: LayoutProps) {
 				url="https://exchange-document-fe.vercel.app"
 				thumbnailUrl="https://drive.google.com/file/d/1Atx_f0i5laHbjXQeqtBj-TfbyODPtjI5/view"
 			/>
-			<Header />
+			<Layout>
+				<Header>Header</Header>
+				<Content>Content</Content>
+				<Footer>Footer</Footer>
+			</Layout>
+			{/* <Header />
 			<div style={{ margin: '30px 50px' }}>{children}</div>
-			<Footer />
+			<Footer /> */}
 		</>
 	)
 }
