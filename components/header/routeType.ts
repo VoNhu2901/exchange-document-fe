@@ -5,6 +5,6 @@ export type RouteProps = {
 	icon: any
 }
 
-export type RoutListProps = {
+export type RouteListProps = {
 	routes: RouteProps[]
 }

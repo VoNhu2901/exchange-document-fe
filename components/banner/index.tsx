@@ -18,6 +18,7 @@ const imageStyle: React.CSSProperties = {
 	height: '20rem',
 	width: '90%',
 	objectFit: 'cover',
+	borderRadius: '0.7rem',
 }
 
 export const Banner = () => {

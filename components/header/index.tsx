@@ -1,4 +1,3 @@
-import { RoutListProps } from '@/components/header/models'
 import { ROUTE_LIST } from '@/utils/data/route'
 import {
 	DownOutlined,
@@ -8,9 +7,9 @@ import {
 	UserOutlined,
 	WechatOutlined,
 } from '@ant-design/icons'
-import { Avatar, Button, MenuProps } from 'antd'
-import { Dropdown, Input, Space } from 'antd'
+import { Avatar, Button, Dropdown, Input, MenuProps, Space } from 'antd'
 import Link from 'next/link'
+import { RouteListProps } from './routeType'
 
 const { Search } = Input
 
@@ -47,13 +46,13 @@ export const Header = () => {
 	return (
 		<>
 			<header className="fixed top-0 left-0 right-0 bg-primary text-white z-50">
-				<div className="flex flex-wrap">
-					<div className="flex flex-none w-128 no-wrap justify-center items-center gap-3">
+				<div className="flex">
+					<div className="flex grow no-wrap justify-center items-center gap-3">
 						<ReadOutlined style={{ fontSize: '5rem' }} />
 						<h1 className="text-white ">Exchange SGU</h1>
 					</div>
 
-					<div className="grow py-4">
+					<div className="flex-none w-[60rem] py-4">
 						<Menu routes={ROUTE_LIST}></Menu>
 						<div className="flex gap-x-8 mt-5">
 							<Search
@@ -74,7 +73,7 @@ export const Header = () => {
 						</div>
 					</div>
 
-					<div className="flex-none w-128">
+					<div className="grow">
 						<div className="flex justify-center items-center h-full gap-3">
 							<Avatar icon={<UserOutlined />} />
 							<Dropdown menu={{ items }} trigger={['click']}>
@@ -93,7 +92,7 @@ export const Header = () => {
 	)
 }
 
-const Menu: React.FC<RoutListProps> = ({ routes }) => {
+const Menu: React.FC<RouteListProps> = ({ routes }) => {
 	return (
 		<>
 			<ul className="list-none flex justify-between p-0 m-0">
