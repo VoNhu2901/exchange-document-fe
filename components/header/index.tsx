@@ -1,21 +1,91 @@
 import { RoutListProps } from '@/components/header/models'
 import { ROUTE_LIST } from '@/utils/data/route'
+import {
+	DownOutlined,
+	FormOutlined,
+	ReadOutlined,
+	SmileOutlined,
+	UserOutlined,
+	WechatOutlined,
+} from '@ant-design/icons'
+import { Avatar, Button, MenuProps } from 'antd'
+import { Dropdown, Input, Space } from 'antd'
 import Link from 'next/link'
-import styles from '../../styles/Home.module.css'
-type Props = {}
 
-export const Header = (props: Props) => {
+const { Search } = Input
+
+const items: MenuProps['items'] = [
+	{
+		key: '0',
+		label: <Link href="/register">Đăng ký/Đăng nhập</Link>,
+	},
+	{
+		key: '1',
+		label: <Link href="/login">Thông tin cá nhân</Link>,
+	},
+	{
+		type: 'divider',
+	},
+	{
+		key: '2',
+		label: (
+			<Button
+				// disabled={isSending}
+				// onClick={handleLogoutClick}
+				style={{ width: '100%', border: 'none' }}
+			>
+				<SmileOutlined />
+				Logout
+			</Button>
+		),
+	},
+]
+
+const onSearch = (value: string) => console.log(value)
+
+export const Header = () => {
 	return (
 		<>
-			<header className={styles.header}>
-				<div className={styles.container}>
-					<h3 className="underline">remove styling with module.css replace by tailwincss</h3>
-					<h1 className={styles.logo}>Exchange SGU</h1>
-					<div className={styles.right}>
-						<div className={styles.menu}>
-							<Menu routes={ROUTE_LIST}></Menu>
+			<header className="fixed top-0 left-0 right-0 bg-primary text-white z-50">
+				<div className="flex flex-wrap">
+					<div className="flex flex-none w-128 no-wrap justify-center items-center gap-3">
+						<ReadOutlined style={{ fontSize: '5rem' }} />
+						<h1 className="text-white ">Exchange SGU</h1>
+					</div>
+
+					<div className="grow py-4">
+						<Menu routes={ROUTE_LIST}></Menu>
+						<div className="flex gap-x-8 mt-5">
+							<Search
+								placeholder="Tìm kiếm trên Exchange SGU"
+								allowClear
+								enterButton
+								size="large"
+								onSearch={onSearch}
+							/>
+							<button className="border-solid border-2 border-white w-48 rounded-xl flex gap-3 bg-secondary hover:bg-secondary/90 cursor-pointer justify-center items-center">
+								<FormOutlined style={{ fontSize: '1.2rem', color: 'white' }} />
+								<span className="text-white text-xl font-bold">Đăng tin</span>
+							</button>
+							<button className=" border-none w-48 rounded-xl flex gap-3 bg-white hover:bg-white/90 cursor-pointer justify-center items-center">
+								<WechatOutlined style={{ fontSize: '1.5rem', color: '#316BFF' }} />
+								<span className="text-blue-dark text-xl font-bold">Chat</span>
+							</button>
 						</div>
-						<div className={styles.search}></div>
+					</div>
+
+					<div className="flex-none w-128">
+						<div className="flex justify-center items-center h-full gap-3">
+							<Avatar icon={<UserOutlined />} />
+							<Dropdown menu={{ items }} trigger={['click']}>
+								<a onClick={(e) => e.preventDefault()} style={{ cursor: 'pointer' }}>
+									<Space>
+										<span className="text-xl">Vo Hoang Quynh Nhu</span>
+										<DownOutlined />
+									</Space>
+								</a>
+							</Dropdown>
+						</div>
 					</div>
 				</div>
 			</header>
@@ -26,11 +96,15 @@ export const Header = (props: Props) => {
 const Menu: React.FC<RoutListProps> = ({ routes }) => {
 	return (
 		<>
-			<ul style={{ listStyle: 'none' }}>
+			<ul className="list-none flex justify-between p-0 m-0">
 				{routes.map((router) => (
 					<li key={router.id}>
-						<Link href={router.path} className={styles.link}>
-							{router.name}
+						<Link
+							href={router.path}
+							className="text-white no-underline text-xl font-bold flex gap-2 items-center"
+						>
+							{router.icon}
+							<span>{router.name}</span>
 						</Link>
 					</li>
 				))}

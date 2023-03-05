@@ -1,3 +1,4 @@
+import { Banner } from '@/components'
 import { MainLayout } from '@/layout'
 import { NextPageWithLayout } from '@/models'
 import { Button } from 'antd'
@@ -10,17 +11,7 @@ const HomePage: NextPageWithLayout = () => {
 	// console.log(publicRuntimeConfig.API_CODE)
 	return (
 		<>
-			<h1>Hello Docker!!</h1>
-			<h1>Hello Docker!!</h1>
-			<h1>Hello Docker!!</h1>
-			<h1>Hello Docker!!</h1>
-			<h1>Hello Docker!!</h1>
-			<h1>Hello Docker!!</h1>
-			<h1>Hello Docker!!</h1>
-			<h1>Hello Docker!!</h1>
-			<h1>Hello Docker!!</h1>
-			<h1 className="underline text-red-400">Hello Docker!!</h1>
-			<Button type="dashed">Dashed Button</Button>
+			<Banner />
 		</>
 	)
 }
