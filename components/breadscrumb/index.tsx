@@ -7,7 +7,7 @@ export const BreadcrumbItem: React.FC<BreadScrumbListProps> = ({ items }) => {
 		<Breadcrumb>
 			{items.map((item) => (
 				<>
-					<Breadcrumb.Item key={item.id}>
+					<Breadcrumb.Item>
 						<Link href={item.link}>{item.name}</Link>
 					</Breadcrumb.Item>
 				</>
