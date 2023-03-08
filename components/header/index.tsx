@@ -16,17 +16,21 @@ const { Search } = Input
 const items: MenuProps['items'] = [
 	{
 		key: '0',
-		label: <Link href="/register">Đăng ký/Đăng nhập</Link>,
+		label: <Link href="/register">Đăng ký</Link>,
 	},
 	{
 		key: '1',
-		label: <Link href="/login">Thông tin cá nhân</Link>,
+		label: <Link href="/login">Đăng nhập</Link>,
+	},
+	{
+		key: '2',
+		label: <Link href="/profile">Thông tin cá nhân</Link>,
 	},
 	{
 		type: 'divider',
 	},
 	{
-		key: '2',
+		key: '3',
 		label: (
 			<Button
 				// disabled={isSending}
@@ -62,14 +66,20 @@ export const Header = () => {
 								size="large"
 								onSearch={onSearch}
 							/>
-							<button className="border-solid border-2 border-white w-48 rounded-xl flex gap-3 bg-secondary hover:bg-secondary/90 cursor-pointer justify-center items-center">
+							<Link
+								className="border-solid border-2 border-white w-48 rounded-xl flex gap-3 bg-secondary hover:bg-secondary/90 cursor-pointer justify-center items-center no-underline"
+								href="/posts"
+							>
 								<FormOutlined style={{ fontSize: '1.2rem', color: 'white' }} />
 								<span className="text-white text-xl font-bold">Đăng tin</span>
-							</button>
-							<button className=" border-none w-48 rounded-xl flex gap-3 bg-white hover:bg-white/90 cursor-pointer justify-center items-center">
+							</Link>
+							<Link
+								className=" border-none w-48 rounded-xl flex gap-3 bg-white hover:bg-white/90 cursor-pointer justify-center items-center no-underline"
+								href="/chat"
+							>
 								<WechatOutlined style={{ fontSize: '1.5rem', color: '#316BFF' }} />
 								<span className="text-blue-dark text-xl font-bold">Chat</span>
-							</button>
+							</Link>
 						</div>
 					</div>
 

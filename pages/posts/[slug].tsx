@@ -1,5 +1,7 @@
-import { Seo } from '@/components'
-import { Button } from 'antd'
+import { MainLayout } from '@/layout'
+import { NextPageWithLayout } from '@/models'
+import { FormOutlined, UserOutlined } from '@ant-design/icons'
+import { Avatar, Carousel } from 'antd'
 
 type Author = {
 	name: string
@@ -38,21 +40,68 @@ const DATA_POST = [
 	},
 ]
 
-const PostDetailPage = ({ post = DATA_POST[1] }: Props) => {
-	if (!post) return null
+const contentStyle: React.CSSProperties = {
+	height: '45rem',
+	width: '50rem',
+	color: '#fff',
+	lineHeight: '160px',
+	textAlign: 'center',
+	background: '#364d79',
+}
 
+const PostDetailPage: NextPageWithLayout = () => {
 	return (
 		<>
-			<Seo
-				title={`${post.title}`}
-				description={`${post.description}`}
-				url={`${process.env.HOST_URL}/post/${post.slug}`}
-				thumbnailUrl={post.thumbnailUrl}
-			/>
-			<h1 className="underline text-red-500">{post.title}</h1>
-			<Button type="primary">Button By Antd</Button>
+			<div className="flex justify-center mb-5">
+				<div className="bg-white w-[80rem]">
+					<h2 className="ml-[2rem] pt-5">Thông tin chi tiết</h2>
+					<div className="grid grid-cols-3 m-5">
+						<div className="col-span-2">
+							<Carousel autoplay>
+								<div>
+									<h3 style={contentStyle}>1</h3>
+								</div>
+								<div>
+									<h3 style={contentStyle}>2</h3>
+								</div>
+							</Carousel>
+							<div>
+								<h3 className="font-bold text-2xl">Đồng hồ ECKO UNL TD sưu tầm độc hiếm fashion</h3>
+								<p className="font-bold text-2xl text-red">550.000 đ</p>
+								<p className="text-xl">
+									❌❌Độc Lạ - Hàng Hiệu - Phê ❌❌ Đồng hồ hàng hiệu ECKO UNL TD. Unisex Nam Nữ
+									chén được hết 😎 Vỏ thép đặc khối như 1 cái dĩa bay Sao Hoả Mới 97%
+								</p>
+								<p className="text-gray-dark">Thời gian đăng: 4 giờ trước</p>
+							</div>
+						</div>
+
+						<div className="ml-2">
+							<div className="mt-5 flex gap-3">
+								<Avatar size={50} icon={<UserOutlined />} />
+								<p className="font-semibold text-2xl">Võ Hoàng Quỳnh Như</p>
+							</div>
+							<div className="flex flex-col gap-3 mt-32">
+								<button className="border-solid border-2 border-white rounded-xl flex gap-3 bg-green hover:bg-green/90 cursor-pointer justify-center items-center w-full p-4">
+									<FormOutlined style={{ fontSize: '1.2rem', color: 'white' }} />
+									<span className="text-white text-xl font-bold">Mua ngay</span>
+								</button>
+								<button className="border-solid border-2 border-green rounded-xl flex gap-3 bg-white hover:bg-white/90 cursor-pointer justify-center items-center w-full p-4">
+									<FormOutlined style={{ fontSize: '1.2rem', color: 'green' }} />
+									<span className="text-green text-xl font-bold">Bấm để hiện số</span>
+								</button>
+								<button className="border-solid border-2 border-green rounded-xl flex gap-3 bg-white hover:bg-white/90 cursor-pointer justify-center items-center w-full p-4">
+									<FormOutlined style={{ fontSize: '1.2rem', color: 'green' }} />
+									<span className="text-green text-xl font-bold">Chat với người bán</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</>
 	)
 }
 
+PostDetailPage.Layout = MainLayout
 export default PostDetailPage

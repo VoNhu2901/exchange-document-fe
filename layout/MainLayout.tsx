@@ -15,7 +15,7 @@ export function MainLayout({ children }: LayoutProps) {
 				<Header />
 				<div
 					style={{
-						minHeight: '100vh',
+						minHeight: '70vh',
 						marginTop: '10rem',
 						marginLeft: '20rem',
 						marginRight: '20rem',

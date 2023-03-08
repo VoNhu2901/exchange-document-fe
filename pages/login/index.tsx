@@ -1,64 +1,65 @@
-import { authApi } from '@/api-clients'
-import { LoginForm } from '@/components/auth'
-import { useAuth } from '@/hooks'
-import { LoginPayload } from '@/models/auth'
-import { useRouter } from 'next/router'
+import { MainLayout } from '@/layout'
+import { NextPageWithLayout } from '@/models'
+import { Button, Input } from 'antd'
+import Image from 'next/image'
+import Link from 'next/link'
+import banner from '../../assets/images/banner1.jpg'
 
-const LoginPage = () => {
-	const router = useRouter()
-	const { profile, login, logout } = useAuth({ revalidateOnMount: false })
+type Props = {}
+const imageStyle: React.CSSProperties = {
+	height: '25rem',
+	width: '30rem',
+	objectFit: 'cover',
+	borderRadius: '0.5rem',
+}
 
-	async function handleLoginClick() {
-		try {
-			await login({ username: '', password: '' })
-			console.log('Redirect to dashboard')
-
-			router.push('/admin')
-		} catch (error) {
-			console.log('Login error: ' + error)
-		}
-	}
-	async function handleGetProfileClick() {
-		try {
-			await authApi.getProfile()
-		} catch (error) {
-			console.log('Get profile error: ' + error)
-		}
-	}
-	async function handleLogoutClick() {
-		try {
-			await logout()
-			console.log('Redirect to login page')
-			router.push('/login')
-		} catch (error) {
-			console.log('Logout error: ' + error)
-		}
-	}
-
-	async function handleLoginSubmit(payload: LoginPayload) {
-		try {
-			await login(payload)
-			console.log('Redirect to dashboard')
-
-			router.push('/admin')
-		} catch (error) {
-			console.log('Login error: ' + error)
-		}
-	}
-
+const LoginPage: NextPageWithLayout = (props: Props) => {
 	return (
-		<div>
-			<h1>LoginPage</h1>
+		<>
+			<div className="flex justify-center items-center mt-60">
+				<div className="bg-white rounded-2xl shadow-2xl w-[80rem] h-[45rem] ">
+					<div className="grid grid-cols-2 divide-x h-full">
+						<div className="flex flex-col items-center justify-center">
+							<h1 className="text-[3rem] text-blue-dark">Trao đổi tài liệu SGU</h1>
+							<Image
+								src={banner}
+								alt="new post"
+								width={500}
+								height={500}
+								style={imageStyle}
+							></Image>
+						</div>
+						<div className="flex flex-col items-center m-10">
+							<h1 className="mt-32">Đăng nhập</h1>
+							<div className="flex flex-col justify-evenly items-center w-full h-full">
+								<div className="flex flex-col gap-5 w-full">
+									<div>
+										<p>Tên đăng nhập</p>
+										<Input placeholder="Nhập email" />
+									</div>
+									<div>
+										<p>Mật khẩu</p>
+										<Input.Password placeholder="Nhập mật khẩu" />
+									</div>
+								</div>
 
-			<p>Profile: {JSON.stringify(profile || {}, null, 4)}</p>
-
-			<button onClick={handleLoginClick}>Login</button>
-			<button onClick={handleGetProfileClick}>Get Profile</button>
-			<button onClick={handleLogoutClick}>Logout</button>
-
-			<LoginForm onSubmit={handleLoginSubmit} />
-		</div>
+								<div>
+									<Button type="primary">Đăng nhập</Button>
+								</div>
+								<p>
+									Bạn chưa có tài khoản?{' '}
+									<span>
+										<Link href="/register">Tạo tài khoản</Link>
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
 	)
 }
 
+LoginPage.Layout = MainLayout
 export default LoginPage
