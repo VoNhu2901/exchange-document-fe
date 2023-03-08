@@ -1,8 +1,7 @@
-import { Seo } from '@/components'
 import { MainLayout } from '@/layout'
 import { NextPageWithLayout } from '@/models'
 import { FormOutlined, UserOutlined } from '@ant-design/icons'
-import { Avatar, Button, Carousel } from 'antd'
+import { Avatar, Carousel } from 'antd'
 
 type Author = {
 	name: string

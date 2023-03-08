@@ -1,6 +1,5 @@
 import { MainLayout } from '@/layout'
 import { NextPageWithLayout } from '@/models'
-import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons'
 import { Button, Input, Radio, RadioChangeEvent } from 'antd'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -31,12 +30,7 @@ const RegisterPage: NextPageWithLayout = () => {
 									</div>
 									<div>
 										<p>Mật khẩu</p>
-										<Input.Password
-											placeholder="Nhập mật khẩu"
-											iconRender={(visible) =>
-												visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
-											}
-										/>
+										<Input.Password placeholder="Nhập mật khẩu" />
 									</div>
 									<div>
 										<p>Địa chỉ</p>

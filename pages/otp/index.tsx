@@ -1,8 +1,6 @@
 import { MainLayout } from '@/layout'
 import { NextPageWithLayout } from '@/models'
 import { Button, Input } from 'antd'
-import Link from 'next/link'
-import React from 'react'
 
 type Props = {}
 

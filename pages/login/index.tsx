@@ -1,6 +1,5 @@
 import { MainLayout } from '@/layout'
 import { NextPageWithLayout } from '@/models'
-import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons'
 import { Button, Input } from 'antd'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -40,12 +39,7 @@ const LoginPage: NextPageWithLayout = (props: Props) => {
 									</div>
 									<div>
 										<p>Mật khẩu</p>
-										<Input.Password
-											placeholder="Nhập mật khẩu"
-											iconRender={(visible) =>
-												visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />
-											}
-										/>
+										<Input.Password placeholder="Nhập mật khẩu" />
 									</div>
 								</div>
 
