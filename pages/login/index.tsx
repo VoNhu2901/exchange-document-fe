@@ -16,11 +16,11 @@ const imageStyle: React.CSSProperties = {
 const LoginPage: NextPageWithLayout = (props: Props) => {
 	return (
 		<>
-			<div className="flex justify-center items-center mt-60">
-				<div className="bg-white rounded-2xl shadow-2xl w-[80rem] h-[45rem] ">
+			<div className="flex justify-center items-center mt-40 mb-10">
+				<div className="bg-white rounded-2xl shadow-2xl w-[68rem] h-[40rem] ">
 					<div className="grid grid-cols-2 divide-x h-full">
-						<div className="flex flex-col items-center justify-center">
-							<h1 className="text-[3rem] text-blue-dark">Trao đổi tài liệu SGU</h1>
+						<div className="flex flex-col justify-center items-center">
+							<h1 className="text-[3rem] text-blue-dark p-0">Trao đổi tài liệu SGU</h1>
 							<Image
 								src={banner}
 								alt="new post"
@@ -30,7 +30,7 @@ const LoginPage: NextPageWithLayout = (props: Props) => {
 							></Image>
 						</div>
 						<div className="flex flex-col items-center m-10">
-							<h1 className="mt-32">Đăng nhập</h1>
+							<h1 className="mt-10">Đăng nhập</h1>
 							<div className="flex flex-col justify-evenly items-center w-full h-full">
 								<div className="flex flex-col gap-5 w-full">
 									<div>

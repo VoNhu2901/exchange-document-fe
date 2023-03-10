@@ -52,7 +52,7 @@ export const Header = () => {
 			<header className="fixed top-0 left-0 right-0 bg-primary text-white z-50">
 				<div className="flex">
 					<div className="flex grow no-wrap justify-center items-center gap-3">
-						<ReadOutlined style={{ fontSize: '5rem' }} />
+						<ReadOutlined style={{ fontSize: '4rem' }} />
 						<h1 className="text-white ">Exchange SGU</h1>
 					</div>
 
@@ -63,7 +63,6 @@ export const Header = () => {
 								placeholder="Tìm kiếm trên Exchange SGU"
 								allowClear
 								enterButton
-								size="large"
 								onSearch={onSearch}
 							/>
 							<Link
@@ -89,7 +88,7 @@ export const Header = () => {
 							<Dropdown menu={{ items }} trigger={['click']}>
 								<a onClick={(e) => e.preventDefault()} style={{ cursor: 'pointer' }}>
 									<Space>
-										<span className="text-xl">Vo Hoang Quynh Nhu</span>
+										<span className="text-lg">Vo Hoang Quynh Nhu</span>
 										<DownOutlined />
 									</Space>
 								</a>
@@ -110,7 +109,7 @@ const Menu: React.FC<RouteListProps> = ({ routes }) => {
 					<li key={router.id}>
 						<Link
 							href={router.path}
-							className="text-white no-underline text-xl font-bold flex gap-2 items-center"
+							className="text-white no-underline text-lg font-bold flex gap-2 items-center"
 						>
 							{router.icon}
 							<span>{router.name}</span>

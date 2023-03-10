@@ -1,5 +1,6 @@
 import {
 	DollarCircleOutlined,
+	FileDoneOutlined,
 	FileSearchOutlined,
 	FolderOpenOutlined,
 	HeartOutlined,
@@ -21,18 +22,24 @@ export const ROUTE_LIST = [
 	},
 	{
 		id: 3,
-		path: '/post',
-		name: 'Mua/Bán',
+		path: '/buy',
+		name: 'Đơn mua',
 		icon: <DollarCircleOutlined />,
 	},
 	{
 		id: 4,
+		path: '/sell',
+		name: 'Đơn bán',
+		icon: <FileDoneOutlined />,
+	},
+	{
+		id: 5,
 		path: '/manage',
 		name: 'Quản lý tin',
 		icon: <FolderOpenOutlined />,
 	},
 	{
-		id: 5,
+		id: 6,
 		path: '/favorite',
 		name: 'Danh sách yêu thích',
 		icon: <HeartOutlined />,
