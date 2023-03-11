@@ -16,10 +16,10 @@ export const Category = () => {
 	return (
 		<div className="mt-5 bg-white">
 			<h2 className="ml-[2rem] pt-5">Khám phá danh mục</h2>
-			<div className="grid grid-cols-7 grid-rows-2 justify-items-center ">
+			<div className="grid grid-cols-7 grid-rows-2 justify-items-center mx-2">
 				{Array.from(Array(10), (_, i) => (
 					<div key={i}>
-						<div className="my-4 flex flex-col items-center text-xl">
+						<div className="my-2 flex flex-col items-center text-xl">
 							<Image
 								src={banner}
 								alt="photo"
@@ -35,7 +35,7 @@ export const Category = () => {
 			<Pagination
 				defaultCurrent={1}
 				total={50}
-				style={{ textAlign: 'center', padding: '2rem 0' }}
+				style={{ textAlign: 'center', padding: '1rem 0' }}
 			/>
 		</div>
 	)
@@ -46,8 +46,8 @@ export const NewPost = () => {
 		<div>
 			<div className="my-5 bg-white">
 				<h2 className="ml-[2rem] pt-5">Tin mới đăng</h2>
-				<div className="grid grid-cols-5 grid-rows-4 justify-items-center gap-2">
-					{Array.from(Array(23), (_, i) => (
+				<div className="grid grid-cols-4 justify-items-center gap-2">
+					{Array.from(Array(15), (_, i) => (
 						<Link href={`/posts/${i}`} key={i} className="cursor-pointer no-underline">
 							<div className="flex flex-col p-4 bg-white hover:shadow-[0_2px_8px_0_rgba(0,0,0,0.3)]">
 								<Image

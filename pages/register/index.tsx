@@ -13,11 +13,11 @@ const RegisterPage: NextPageWithLayout = () => {
 	}
 	return (
 		<>
-			<div className="flex justify-center items-center mt-60">
-				<div className="bg-white rounded-2xl shadow-2xl w-[50rem] h-[55rem] ">
+			<div className="flex justify-center items-center mt-40 mb-10">
+				<div className="bg-white rounded-2xl shadow-2xl w-[35rem] h-[46rem] ">
 					<div className="h-full">
 						<div className="flex flex-col items-center m-10">
-							<h1 className="mt-8">Đăng ký</h1>
+							<h1 className="pt-0 mt-0">Đăng ký</h1>
 							<div className="flex flex-col justify-evenly items-center w-full h-full">
 								<div className="flex flex-col gap-5 w-full">
 									<div>
@@ -43,7 +43,7 @@ const RegisterPage: NextPageWithLayout = () => {
 											<Radio value={2}>Nữ</Radio>
 										</Radio.Group>
 									</div>
-									<div className="flex justify-evenly mt-10">
+									<div className="flex justify-evenly">
 										<p>
 											Bạn đã có tài khoản?{' '}
 											<span>

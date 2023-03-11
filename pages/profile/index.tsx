@@ -9,8 +9,8 @@ type Props = {}
 const ProfilePage: NextPageWithLayout = (props: Props) => {
 	return (
 		<div className="flex justify-center items-center my-10">
-			<div className="bg-white shadow-2xl w-[70rem] h-[60rem] p-10">
-				<h1 className="mb-14">Thông tin cá nhân</h1>
+			<div className="bg-white shadow-2xl w-[60rem] h-[55rem] px-8">
+				<h1 className="mb-8">Thông tin cá nhân</h1>
 				<div className="grid grid-cols-4">
 					<div className="text-center">
 						<Avatar size={128} icon={<UserOutlined />} />
@@ -60,7 +60,7 @@ const ProfilePage: NextPageWithLayout = (props: Props) => {
 									<Radio value={2}>Nữ</Radio>
 								</Radio.Group>
 							</div>
-							<Button type="primary" style={{ marginTop: '2rem' }}>
+							<Button type="primary" style={{ margin: '1rem 0' }}>
 								Cập nhật thông tin
 							</Button>
 						</div>

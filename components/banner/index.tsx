@@ -27,7 +27,7 @@ export const Banner = () => {
 			<div>
 				<div className="grid grid-cols-2">
 					<div style={contentStyle}>
-						<h2 className="text-[3rem] m-0 text-blue-dark">Trao đổi tài liệu SGU</h2>
+						<h2 className="text-[2rem] m-0 text-blue-dark">Trao đổi tài liệu SGU</h2>
 						<p className="text-xl text-gray-dark font-semibold">
 							Bạn đồng hành của mỗi sinh viên vào mỗi học kì mới
 						</p>
@@ -44,7 +44,7 @@ export const Banner = () => {
 			<div>
 				<div className="grid grid-cols-2">
 					<div style={contentStyle}>
-						<h2 className="text-[3rem] m-0 text-blue-dark">Trao đổi tài liệu SGU</h2>
+						<h2 className="text-[2rem] m-0 text-blue-dark">Trao đổi tài liệu SGU</h2>
 						<p className="text-xl text-gray-dark font-semibold">
 							Bạn đồng hành của mỗi sinh viên vào mỗi học kì mới
 						</p>
@@ -61,7 +61,7 @@ export const Banner = () => {
 			<div>
 				<div className="grid grid-cols-2">
 					<div style={contentStyle}>
-						<h2 className="text-[3rem] m-0 text-blue-dark">Trao đổi tài liệu SGU</h2>
+						<h2 className="text-[2rem] m-0 text-blue-dark">Trao đổi tài liệu SGU</h2>
 						<p className="text-xl text-gray-dark font-semibold">
 							Bạn đồng hành của mỗi sinh viên vào mỗi học kì mới
 						</p>

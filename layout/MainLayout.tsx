@@ -17,8 +17,8 @@ export function MainLayout({ children }: LayoutProps) {
 					style={{
 						minHeight: '70vh',
 						marginTop: '10rem',
-						marginLeft: '20rem',
-						marginRight: '20rem',
+						marginLeft: '10rem',
+						marginRight: '10rem',
 					}}
 				>
 					{children}

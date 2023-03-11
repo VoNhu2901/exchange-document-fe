@@ -2,6 +2,7 @@ import { MainLayout } from '@/layout'
 import { NextPageWithLayout } from '@/models'
 import { FormOutlined, UserOutlined } from '@ant-design/icons'
 import { Avatar, Carousel } from 'antd'
+import Link from 'next/link'
 
 type Author = {
 	name: string
@@ -77,9 +78,16 @@ const PostDetailPage: NextPageWithLayout = () => {
 						</div>
 
 						<div className="ml-2">
-							<div className="mt-5 flex gap-3">
+							<div className="mt-5 flex gap-3 items-center">
 								<Avatar size={50} icon={<UserOutlined />} />
-								<p className="font-semibold text-2xl">Võ Hoàng Quỳnh Như</p>
+								<div className="">
+									<p className="font-semibold text-xl m-0">Võ Hoàng Quỳnh Như</p>
+									<Link href="/user/0" className="no-underline">
+										<button className="border-solid border-[0.2rem] border-secondary w-24 py-2 rounded-full flex gap-3 bg-white hover:bg-secondary/40 cursor-pointer justify-center items-center">
+											<span className="text-secondary text-sm font-bold">Xem trang</span>
+										</button>
+									</Link>
+								</div>
 							</div>
 							<div className="flex flex-col gap-3 mt-32">
 								<button className="border-solid border-2 border-white rounded-xl flex gap-3 bg-green hover:bg-green/90 cursor-pointer justify-center items-center w-full p-4">

@@ -11,7 +11,7 @@ const HomePage: NextPageWithLayout = () => {
 	// console.log(publicRuntimeConfig.API_CODE)
 	return (
 		<div className="mx-20">
-			<BreadcrumbItem items={breadcrumbHome} />
+			{/* <BreadcrumbItem items={breadcrumbHome} /> */}
 			<Banner />
 			<Category />
 			<NewPost />
