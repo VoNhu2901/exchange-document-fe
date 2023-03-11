@@ -82,11 +82,11 @@ const columns: ColumnsType<DataType> = [
 					</button>
 					<button className="border-solid border-2 border-blue-dark w-40 rounded-xl flex gap-3 bg-white hover:bg-primary/40 cursor-pointer justify-center items-center">
 						<FormOutlined style={{ fontSize: '1rem', color: '#316BFF' }} />
-						<span className="text-blue-dark text-xl font-bold">Duyệt đơn</span>
+						<span className="text-blue-dark text-xl font-bold">Hủy</span>
 					</button>
 					<button className="border-solid border-2 border-blue-dark w-40 rounded-xl flex gap-3 bg-white hover:bg-primary/40 cursor-pointer justify-center items-center">
 						<FormOutlined style={{ fontSize: '1rem', color: '#316BFF' }} />
-						<span className="text-blue-dark text-xl font-bold">Duyệt đơn</span>
+						<span className="text-blue-dark text-xl font-bold">Xác nhận</span>
 					</button>
 				</div>
 			</Space>

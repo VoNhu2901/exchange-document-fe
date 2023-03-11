@@ -51,10 +51,13 @@ export const Header = () => {
 		<>
 			<header className="fixed top-0 left-0 right-0 bg-primary text-white z-50">
 				<div className="flex">
-					<div className="flex grow no-wrap justify-center items-center gap-3">
+					<Link
+						href="/"
+						className="flex grow no-wrap justify-center items-center gap-3 text-white no-underline"
+					>
 						<ReadOutlined style={{ fontSize: '4rem' }} />
-						<h1 className="text-white ">Exchange SGU</h1>
-					</div>
+						<h1>Exchange SGU</h1>
+					</Link>
 
 					<div className="flex-none w-[60rem] py-4">
 						<Menu routes={ROUTE_LIST}></Menu>
