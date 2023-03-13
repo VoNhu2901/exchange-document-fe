@@ -1,6 +1,6 @@
 import { MainLayout } from '@/layout'
 import { NextPageWithLayout } from '@/models'
-import { FormOutlined, UserOutlined } from '@ant-design/icons'
+import { InboxOutlined, PhoneFilled, UserOutlined, WechatOutlined } from '@ant-design/icons'
 import { Avatar, Carousel } from 'antd'
 import Link from 'next/link'
 
@@ -91,15 +91,15 @@ const PostDetailPage: NextPageWithLayout = () => {
 							</div>
 							<div className="flex flex-col gap-3 mt-32">
 								<button className="border-solid border-2 border-white rounded-xl flex gap-3 bg-green hover:bg-green/90 cursor-pointer justify-center items-center w-full p-4">
-									<FormOutlined style={{ fontSize: '1.2rem', color: 'white' }} />
+									<InboxOutlined style={{ fontSize: '1.5rem', color: 'white' }} />
 									<span className="text-white text-xl font-bold">Mua ngay</span>
 								</button>
 								<button className="border-solid border-2 border-green rounded-xl flex gap-3 bg-white hover:bg-white/90 cursor-pointer justify-center items-center w-full p-4">
-									<FormOutlined style={{ fontSize: '1.2rem', color: 'green' }} />
+									<PhoneFilled style={{ fontSize: '1.5rem', color: 'green' }} />
 									<span className="text-green text-xl font-bold">Bấm để hiện số</span>
 								</button>
 								<button className="border-solid border-2 border-green rounded-xl flex gap-3 bg-white hover:bg-white/90 cursor-pointer justify-center items-center w-full p-4">
-									<FormOutlined style={{ fontSize: '1.2rem', color: 'green' }} />
+									<WechatOutlined style={{ fontSize: '1.5rem', color: 'green' }} />
 									<span className="text-green text-xl font-bold">Chat với người bán</span>
 								</button>
 							</div>

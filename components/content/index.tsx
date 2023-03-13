@@ -41,15 +41,18 @@ export const Category = () => {
 	)
 }
 
-export const NewPost = () => {
+type NewPostType = {
+	title: string
+}
+export const NewPost = ({ title = 'Tin mới đăng' }: NewPostType) => {
 	return (
 		<div>
 			<div className="my-5 bg-white">
-				<h2 className="ml-[2rem] pt-5">Tin mới đăng</h2>
+				<h2 className="ml-[2rem] pt-5">{title}</h2>
 				<div className="grid grid-cols-4 justify-items-center gap-2">
 					{Array.from(Array(15), (_, i) => (
 						<Link href={`/posts/${i}`} key={i} className="cursor-pointer no-underline">
-							<div className="flex flex-col p-4 bg-white hover:shadow-[0_2px_8px_0_rgba(0,0,0,0.3)]">
+							<div className="flex flex-col p-4 bg-white hover:shadow-[0_2px_8px_0_rgba(0,0,0,0.3)] rounded">
 								<Image
 									src={banner}
 									alt="new post"
