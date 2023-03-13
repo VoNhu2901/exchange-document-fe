@@ -8,7 +8,7 @@ const AllPostPage: NextPageWithLayout = (props: Props) => {
 	return (
 		<>
 			<FilterPost />
-			<NewPost />
+			<NewPost title="Tất cả tin" />
 		</>
 	)
 }

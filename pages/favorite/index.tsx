@@ -1,8 +1,8 @@
 import { MainLayout } from '@/layout'
 import { NextPageWithLayout } from '@/models'
+import { HeartFilled, InboxOutlined } from '@ant-design/icons'
 import Image from 'next/image'
 import banner from '../../assets/images/banner1.jpg'
-import { HeartFilled, WechatOutlined } from '@ant-design/icons'
 
 type Props = {}
 const imageStyle: React.CSSProperties = {
@@ -29,7 +29,7 @@ const FavoritePostPage: NextPageWithLayout = (props: Props) => {
 						<div className="flex items-end">
 							<div className="flex items-center justify-end gap-5 p-4 ">
 								<button className=" border-none w-48 rounded-xl flex gap-3 bg-green/30 hover:bg-green/10 cursor-pointer justify-center items-center p-3">
-									<WechatOutlined style={{ fontSize: '1.5rem', color: '#589f39' }} />
+									<InboxOutlined style={{ fontSize: '1.5rem', color: '#589f39' }} />
 									<span className="text-green text-xl font-medium">Mua ngay</span>
 								</button>
 								<HeartFilled style={{ fontSize: '1.5rem', color: 'red' }} />

@@ -1,6 +1,5 @@
 import { Footer, Header, Seo } from '@/components'
 import { LayoutProps } from '@/models'
-import * as React from 'react'
 
 export function MainLayout({ children }: LayoutProps) {
 	return (
@@ -17,8 +16,9 @@ export function MainLayout({ children }: LayoutProps) {
 					style={{
 						minHeight: '70vh',
 						marginTop: '10rem',
-						marginLeft: '10rem',
-						marginRight: '10rem',
+						width: '70rem',
+						marginLeft: 'auto',
+						marginRight: 'auto',
 					}}
 				>
 					{children}
