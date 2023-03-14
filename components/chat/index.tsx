@@ -4,9 +4,8 @@ import SockJS from 'sockjs-client'
 
 type Props = {}
 
-var stompClient: any = null
+let stompClient: any = null
 export const ChatRoom = (props: Props) => {
-	// let stompClient: any = null
 	const [publicChats, setPublicChats] = useState<any>([])
 	const [privateChats, setPrivateChats] = useState<any>(new Map())
 	const [tab, setTab] = useState('CHATROOM')
@@ -35,7 +34,7 @@ export const ChatRoom = (props: Props) => {
 	}
 
 	const userJoin = () => {
-		var chatMessage = {
+		const chatMessage = {
 			senderName: userData.username,
 			status: 'JOIN',
 		}
@@ -43,7 +42,7 @@ export const ChatRoom = (props: Props) => {
 	}
 
 	const onMessageReceived = (payload: any) => {
-		var payloadData = JSON.parse(payload.body)
+		const payloadData = JSON.parse(payload.body)
 		switch (payloadData.status) {
 			case 'JOIN':
 				if (!privateChats.get(payloadData.senderName)) {
@@ -60,7 +59,7 @@ export const ChatRoom = (props: Props) => {
 
 	const onPrivateMessage = (payload: any) => {
 		console.log(payload)
-		var payloadData = JSON.parse(payload.body)
+		const payloadData = JSON.parse(payload.body)
 		if (privateChats.get(payloadData.senderName)) {
 			privateChats.get(payloadData.senderName).push(payloadData)
 			setPrivateChats(new Map(privateChats))
@@ -82,7 +81,7 @@ export const ChatRoom = (props: Props) => {
 	}
 	const sendValue = () => {
 		if (stompClient) {
-			var chatMessage = {
+			const chatMessage = {
 				senderName: userData.username,
 				message: userData.message,
 				status: 'MESSAGE',
@@ -95,7 +94,7 @@ export const ChatRoom = (props: Props) => {
 
 	const sendPrivateValue = () => {
 		if (stompClient) {
-			var chatMessage = {
+			const chatMessage = {
 				senderName: userData.username,
 				receiverName: tab,
 				message: userData.message,
