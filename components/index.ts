@@ -1,6 +1,7 @@
 export * from './auth'
 export * from './banner'
 export * from './breadscrumb'
+export * from './chat'
 export * from './content'
 export * from './filterpost'
 export * from './footer'

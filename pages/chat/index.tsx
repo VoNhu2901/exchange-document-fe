@@ -1,10 +1,15 @@
+import { ChatRoom } from '@/components'
 import { MainLayout } from '@/layout'
 import { NextPageWithLayout } from '@/models'
 
 type Props = {}
 
 const ChatPage: NextPageWithLayout = (props: Props) => {
-	return <div>ChatPage</div>
+	return (
+		<>
+			<ChatRoom />
+		</>
+	)
 }
 
 ChatPage.Layout = MainLayout
